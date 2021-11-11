@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Meus filmes teste
 //
-//  Created by Jamilton  Damasceno on 17/07/17.
-//  Copyright © 2017 Curso IOS. All rights reserved.
+//  Created by Helio Marcus Nery Fidalgo on 08/11/21.
+//  Copyright © 2021 Curso IOS. All rights reserved.
 //
 
 import UIKit

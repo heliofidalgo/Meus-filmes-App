@@ -1,26 +1,164 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GbP-ab-fhv">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Meus filmes-->
+        <scene sceneID="F1E-Zp-X2Q">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="08K-lz-tM6" customClass="ViewController" customModule="Meus_filmes_teste" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="PsN-1x-aPl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula" id="uS5-kb-Vtc" customClass="FilmeCelula" customModule="Meus_filmes_teste" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uS5-kb-Vtc" id="yqe-4y-IMp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F8V-ZN-kAH">
+                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="84" id="4YH-ZB-gyi"/>
+                                                <constraint firstAttribute="height" constant="84" id="rBm-KC-fGH"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                                    <integer key="value" value="42"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rHa-pl-q2A">
+                                            <rect key="frame" x="118" y="30.5" width="52.5" height="39.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVS-HO-Qkh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="52.5" height="24"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2V-Ci-Z0u">
+                                                    <rect key="frame" x="0.0" y="24" width="52.5" height="15.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" red="0.43089393911117746" green="0.43516021573604058" blue="0.43516021573604058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rHa-pl-q2A" firstAttribute="leading" secondItem="F8V-ZN-kAH" secondAttribute="trailing" constant="26" id="FR1-gj-I93"/>
+                                        <constraint firstItem="rHa-pl-q2A" firstAttribute="centerY" secondItem="yqe-4y-IMp" secondAttribute="centerY" id="QoG-bh-1oO"/>
+                                        <constraint firstItem="F8V-ZN-kAH" firstAttribute="centerY" secondItem="yqe-4y-IMp" secondAttribute="centerY" id="axj-Pa-YmC"/>
+                                        <constraint firstItem="F8V-ZN-kAH" firstAttribute="leading" secondItem="yqe-4y-IMp" secondAttribute="leading" constant="8" id="tN3-hw-Dcz"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descricaoLabel" destination="q2V-Ci-Z0u" id="tJI-9z-zMn"/>
+                                    <outlet property="filmeImageView" destination="F8V-ZN-kAH" id="rQr-z8-8kn"/>
+                                    <outlet property="tituloLabel" destination="EVS-HO-Qkh" id="YLI-jZ-WK3"/>
+                                    <segue destination="0zw-TG-pr9" kind="show" identifier="detalheFilme" id="Pv0-Mr-KPf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="08K-lz-tM6" id="63K-7p-z2U"/>
+                            <outlet property="delegate" destination="08K-lz-tM6" id="R2c-tr-ru6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Meus filmes" id="sFm-Pe-QhE"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IJ1-FQ-iPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="412" y="126.38680659670166"/>
+        </scene>
+        <!--Detalhes Filme View Controller-->
+        <scene sceneID="Mz2-6j-XvO">
+            <objects>
+                <viewController id="0zw-TG-pr9" customClass="DetalhesFilmeViewController" customModule="Meus_filmes_teste" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ShF-C7-O2a"/>
+                        <viewControllerLayoutGuide type="bottom" id="QHI-Mr-7fX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Et7-90-32F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filme2" translatesAutoresizingMaskIntoConstraints="NO" id="PwC-b8-N4E">
+                                <rect key="frame" x="16" y="78" width="343" height="408"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="408" id="AwW-0v-BOv"/>
+                                    <constraint firstAttribute="width" constant="343" id="z61-uK-NeT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo do Filme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qK-dd-g4A">
+                                <rect key="frame" x="16" y="494" width="343" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="DESCRIÇÃO" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zi-HL-3Sf">
+                                <rect key="frame" x="16" y="523" width="343" height="34"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PwC-b8-N4E" firstAttribute="leading" secondItem="Et7-90-32F" secondAttribute="leadingMargin" id="54O-jJ-G3w"/>
+                            <constraint firstItem="PwC-b8-N4E" firstAttribute="trailing" secondItem="Et7-90-32F" secondAttribute="trailingMargin" id="I9W-zp-NiR"/>
+                            <constraint firstItem="5qK-dd-g4A" firstAttribute="top" secondItem="PwC-b8-N4E" secondAttribute="bottom" constant="8" id="R97-lR-X2m"/>
+                            <constraint firstItem="5qK-dd-g4A" firstAttribute="leading" secondItem="Et7-90-32F" secondAttribute="leadingMargin" id="WW1-qS-dju"/>
+                            <constraint firstItem="0zi-HL-3Sf" firstAttribute="top" secondItem="5qK-dd-g4A" secondAttribute="bottom" constant="5" id="cRI-Af-qOV"/>
+                            <constraint firstItem="0zi-HL-3Sf" firstAttribute="trailing" secondItem="Et7-90-32F" secondAttribute="trailingMargin" id="eRQ-aE-qk2"/>
+                            <constraint firstItem="PwC-b8-N4E" firstAttribute="top" secondItem="ShF-C7-O2a" secondAttribute="bottom" constant="34" id="iHS-I8-uba"/>
+                            <constraint firstItem="5qK-dd-g4A" firstAttribute="trailing" secondItem="Et7-90-32F" secondAttribute="trailingMargin" id="qsn-PJ-hsP"/>
+                            <constraint firstItem="0zi-HL-3Sf" firstAttribute="leading" secondItem="Et7-90-32F" secondAttribute="leadingMargin" id="xfv-Vr-GaE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fob-Im-Nk2"/>
+                    <connections>
+                        <outlet property="descricaoLabel" destination="0zi-HL-3Sf" id="uHM-4Q-wlE"/>
+                        <outlet property="filmeimageView" destination="PwC-b8-N4E" id="bu6-k1-CCY"/>
+                        <outlet property="tituloLabel" destination="5qK-dd-g4A" id="v1s-Ab-pL7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UEm-VI-QLI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="124.58770614692655"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zH3-mP-rL0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GbP-ab-fhv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qnw-oW-1Ep">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="08K-lz-tM6" kind="relationship" relationship="rootViewController" id="JDW-jT-qhQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X91-uW-ysA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-273" y="126"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="filme2" width="252.66667175292969" height="268.33334350585938"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
